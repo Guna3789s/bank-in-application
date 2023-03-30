@@ -1,0 +1,15 @@
+services:
+  loan:
+    image: gunaseelan3789/loan
+    ports:
+      - "8084:8084"
+    networks:
+      - bank-network
+  AccountTest:
+    image: gunaseelan3789/accounttest
+    ports:
+      - "8081:8081"
+    networks:
+      - bank-network
+networks:
+  bank-network: {}
